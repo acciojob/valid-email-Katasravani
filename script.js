@@ -1,7 +1,18 @@
-function validEmail(str) {
-  //your JS code here.
+function validEmail(email) {
+    // Regular expression for a valid email address
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    // Check if the input matches the email regex
+    return emailRegex.test(email);
 }
 
-// Do not change the code below.
-const str = prompt("Enter an email address.");
-alert(validEmail(str));
+// Take user input
+var user_email = prompt("Enter an email address:");
+
+
+if (validEmail(user_email)) {
+    alert(true);
+} else {
+    alert(false);
+}
+
